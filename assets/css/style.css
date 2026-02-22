@@ -8,4 +8,79 @@ html {
 
 body {
     font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0px 16px;
+    min-width: 118px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #FFFCF4;
+    border-radius: 24.5px;
+    background: #171100;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    background: #f38450;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0px 8px;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    color: #5F5B53;
+    padding: 8px 21px;
+}
+
+.nav li.active a,
+.nav a:hover {
+    color: #171100;
+    text-shadow: 1px 0px 0px currentColor;
+}
+
+.nav li.active a::after {
+    position: absolute;
+    left: 21px;
+    bottom: 6px;
+    display: block;
+    width: 12px;
+    height: 2px;
+    content: "";
+    border-radius: 1px;
+    background: #171100;
+}
+
+.header .btn-sign-up {
+    min-width: 144px;
 }
