@@ -5,6 +5,7 @@
 :root {
     --font-heading: "Sen", sans-serif;
     --primary-color: #FFB900;
+    --desc-p: #5F5B53;
 }
 
 html {
@@ -27,6 +28,10 @@ a {
     text-decoration: none;
 }
 
+.desc {
+    color: var(--desc-p)
+}
+
 .btn {
     display: inline-block;
     padding: 0px 16px;
@@ -44,6 +49,23 @@ a {
     opacity: 0.8;
     cursor: pointer;
 }
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 1;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+/* =================== header ========================= */
 
 .header.fixed {
     position: sticky;
@@ -270,7 +292,6 @@ a {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     line-height: 1.67;
-    color: #5F5B53;
 }
 
 .popular-top {
@@ -329,6 +350,7 @@ a {
     height: 278px;
     width: 100%;
     object-fit: cover;
+    border-radius: 12px 12px 0 0;
 }
 
 .course-list .course-item .info {
@@ -339,6 +361,7 @@ a {
 .course-list .course-item .rating,
 .course-list .course-item .head {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     align-items: center;
 }
@@ -348,27 +371,19 @@ a {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
-
-}
-
-.course-list .course-item .star {
-    width: 1.8rem;
-    height: 1.8rem;
-    margin-right: 6px;
 }
 
 .course-list .course-item .value {
     font-size: 1.6rem;
     line-height: 1.75;
     color: var(--primary-color);
+    margin-left: 6px;
 }
 
 .course-list .course-item .desc {
     font-size: 1.4rem;
     line-height: 1.86;
     margin-top: 6px;
-    color: #5F5B53;
-
 }
 
 .course-list .course-item .foot {
@@ -380,6 +395,7 @@ a {
     font-weight: 600;
     font-size: 1.8srem;
     line-height: 1.67;
+    margin-right: 22px;
 }
 
 .course-list .foot .btn-book-now:hover {
@@ -392,4 +408,181 @@ a {
 
 .course-item a img {
     cursor: pointer;
+}
+
+/* ============================ feedback ============================= */
+
+.feedback {
+    margin-top: 135px;
+    padding: 65px;
+    background: #2E2100;
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.feedback-item .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback-item .info .member-name {
+    color: #F7F7F7;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    margin-top: 18px;
+    font-family: var(--font-heading);
+}
+
+.feedback-item .info .desc {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #BFBCB2;
+}
+
+.feedback-item .info .dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 28px;
+}
+
+.feedback-item .dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+
+.feedback-item .dot.active {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: default;
+}
+
+.feedback-item .content {
+    width: 66%;
+}
+
+.feedback-item blockquote {
+    font-style: Italic;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #fff;
+    margin-left: 30px;
+}
+
+/* ============================ feature top (feature 1) ================================= */
+
+.features {
+    padding: 65px 0;
+    margin-top: 135px;
+    /* background: blue; */
+}
+
+.features .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features .images {
+    display: flex;
+    gap: 30px;
+}
+
+.features .images img {
+    width: 270px;
+    height: 404px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.features .images .lower {
+    margin-top: 34px;
+}
+
+.features .content {
+    width: 41%;
+
+}
+
+.features .content .desc {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+}
+
+.features .content .cta-btn {
+    margin-top: 32px;
+    background: var(--primary-color);
+    min-width: 137px;
+    height: 50px;
+}
+
+/* ==================================== feature bottom (feature 2) =====================================*/
+
+.feature-2nd {
+    margin-top: 70px;
+}
+
+.feature-2nd .body {
+    flex-direction: row-reverse;
+}
+
+.feature-2nd .content {
+    width: 49%;
+}
+
+.feature-2nd .images img {
+    width: 470px;
+    height: 440px;
+}
+
+/* ======================== blog ========================= */
+
+.blogs {
+    margin-top: 135px;
+    padding: 96px 0;
+    background: #FFFCF4;
+    /* background: blue; */
+}
+
+.blogs .blog-top {
+    text-align: center;
+}
+
+.blogs .blog-top .desc {
+    margin: 16px auto 0;
+    width: 448px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.blogs .blog-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.blogs .blog-item {
+    width: 33.33%;
+    border-radius: 16px;
+    background: #fff;
 }
